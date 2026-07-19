@@ -1,2 +1,18 @@
-@use './scss/normalize';
-@use './scss/variables/variables' as *;
+@use "./scss/normalize";
+@use "./scss/variables/variables" as *;
+
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap");
+
+body {
+  font-family: "Space Grotesk";
+
+  color: var(--text);
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(
+    156deg,
+    rgba(237, 227, 255, 1) 0%,
+    rgba(233, 207, 255, 1) 50%,
+    rgba(203, 179, 255, 1) 100%
+  );
+}

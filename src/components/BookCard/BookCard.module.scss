@@ -1,0 +1,93 @@
+.bookCard {
+  position: relative;
+  aspect-ratio: 2 / 3;
+  overflow: hidden;
+  border-radius: 20px;
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+  cursor: pointer;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+
+  &:hover {
+    box-shadow: var(--glass-shadow-hover);
+
+    .bookCard__image {
+      transform: scale(1.05);
+    }
+
+    .bookCard__overlay {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+
+  &__overlay {
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    padding: 1.25rem;
+
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1));
+
+    color: white;
+
+    opacity: 0;
+    transform: translateY(20px);
+
+    transition:
+      opacity 0.3s ease,
+      transform 0.3s ease;
+  }
+
+  &__meta {
+    font-size: 0.7rem;
+    color: var(--accent);
+    font-weight: 700;
+  }
+
+  &__title {
+    margin: 0.5rem 0;
+    font-size: 1.1rem;
+    font-weight: 800;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  &__author {
+    font-size: 0.85rem;
+    margin: 0;
+  }
+
+  &__publisher {
+    font-size: 0.75rem;
+    opacity: 0.8;
+  }
+
+  &__description {
+    font-size: 0.8rem;
+    line-height: 1.4;
+    opacity: 0.8;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
