@@ -4,7 +4,7 @@ LewBooGle is a React-based book search app using Google Books API. This app feat
 
 ## Features
 
-- Search books by title, author, or keyword using Google Book API call
+- Search books by keyword using Google Book API call
 - Responsive grid layout for different screen sizes
 - Interactive book cards with hover effects
 - Book detail modal with additional information:
