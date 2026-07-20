@@ -4,6 +4,7 @@ import BookList from "../components/BookList/BookList";
 import classes from "./BooksContainer.module.scss";
 
 const BooksContainer = ({ searchTerm }) => {
+  // Stores fetched books, current fetch status, and errors
   const [books, setBooks] = useState(null);
   const [status, setStatus] = useState("idle");
   const [error, setError] = useState(null);
@@ -13,20 +14,26 @@ const BooksContainer = ({ searchTerm }) => {
       return;
     }
 
+    // Set loading state before fetching data
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setStatus("loading");
     setError(null);
 
+    // Fetch books from Google Books API
     getBooksBySearchTerm(searchTerm)
       .then((data) => {
+        // Store fetched books and update status
         setStatus("success");
         setBooks(data);
       })
       .catch((err) => {
+        // Store error message when API request fails
         setStatus("error");
         setError(err);
       });
   }, [searchTerm]);
 
+  // Initial state before user searches
   if (status === "idle") {
     return (
       <div className={classes.booksContainer__message}>
@@ -40,6 +47,7 @@ const BooksContainer = ({ searchTerm }) => {
     );
   }
 
+  // Display loading state while fetching books
   if (status === "loading") {
     return (
       <div className={classes.booksContainer__loading}>
@@ -48,6 +56,7 @@ const BooksContainer = ({ searchTerm }) => {
     );
   }
 
+  // Display error message if API request fails
   if (status === "error") {
     return (
       <div className={classes.booksContainer__message}>
@@ -60,7 +69,7 @@ const BooksContainer = ({ searchTerm }) => {
     );
   }
 
-  // bonus MVP: returns no result message if book length === 0
+  // Bonus MVP: Display message when search returns no books
   if (status === "success" && books.length === 0) {
     return (
       <div className={classes.booksContainer__message}>
@@ -74,6 +83,7 @@ const BooksContainer = ({ searchTerm }) => {
     );
   }
 
+  // Render book list when books are successfully fetched
   if (status === "success") {
     return <BookList books={books} />;
   }

@@ -1,6 +1,7 @@
 import classes from "./BookCard.module.scss";
 
 const BookCard = ({ book, onClick }) => {
+  //get required book info form google book api & return empty object is data is missing
   const { title, authors, description, imageLinks, publishedDate, publisher } =
     book?.volumeInfo || {}; //optional chaning, if book exists, get the volume info, otherwise returns empty object
   //seperates authors by , if there are mutiple authors

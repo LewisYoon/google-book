@@ -5,9 +5,11 @@ import { FaSearch } from "react-icons/fa";
 const SearchBar = ({ placeholder, labelText, id, onSearch }) => {
   const [inputValue, setInputValue] = useState("");
 
+  // Handles form submission and sends search value to parent component
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    // Prevent empty search requests
     if (inputValue.trim()) {
       onSearch(inputValue);
     }
