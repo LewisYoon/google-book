@@ -5,4 +5,9 @@ import react from "@vitejs/plugin-react";
 export default defineConfig({
   plugins: [react()],
   base: "/google-book/",
+  test: {
+    globals: true,
+    environment: "jsdom",
+    setupFiles: "./config/test-setup.js",
+  },
 });
