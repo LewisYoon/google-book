@@ -122,9 +122,9 @@ Tests verify that:
 
 - Mocked API results are rendered correctly after a successful search.
 
-## Test results
-
 ## Test Results
+<img width="750" height="340" alt="Screenshot 2026-07-20 at 5 56 02 pm" src="https://github.com/user-attachments/assets/3f65fcf2-d3d2-44bd-8e40-435e3a4f2164" />
+
 
 ### BookCard Tests
 
