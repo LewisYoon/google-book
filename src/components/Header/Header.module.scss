@@ -2,22 +2,40 @@
 @use "../../scss/mixins/media" as *;
 
 .header {
-  padding: 4rem 1.5rem 2rem;
+  padding: 5rem 1.5rem 2rem;
   text-align: center;
   position: relative;
   z-index: 10;
+
   @include flex(column, 0.75rem);
   align-items: center;
 
   @include md {
-    padding: 5rem 2rem 3rem;
+    padding: 6rem 2rem 3rem;
   }
 
   h1 {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     font-weight: 800;
     line-height: 1.2;
-    letter-spacing: -0.01em;
+  }
+  &__black {
+    color: black;
+  }
+  &__blue {
+    color: #4285f4;
+  }
+
+  &__red {
+    color: #ea4335;
+  }
+
+  &__yellow {
+    color: #fbbc05;
+  }
+
+  &__green {
+    color: #34a853;
   }
 
   p {
