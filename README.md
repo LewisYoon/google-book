@@ -71,7 +71,7 @@ npm run dev
 
 ### Live Demo
 
-OR check out the deployed version:
+Or check out the deployed version at:
 
 https://lewisyoon.github.io/google-book/
 
