@@ -12,31 +12,23 @@ const BookModal = ({ book, onClose }) => {
     categories,
     previewLink,
   } = book?.volumeInfo || {};
-
   return (
     <div className={classes.bookModal} onClick={onClose}>
       <div
         className={classes.bookModal__content}
-        onClick={(e) => e.stopPropagation()}
+        onClick={(e) => e.stopPropagation()} // Stop event bubbling so clicking inside the modal doesn't close it
       >
         <button className={classes.bookModal__close} onClick={onClose}>
           ×
         </button>
 
         <h2 className={classes.bookModal__title}>{title}</h2>
-
         <p>{authors?.join(", ") || "Unknown Author"}</p>
-
         {publisher && <p>Publisher: {publisher}</p>}
-
         {publishedDate && <p>Published: {publishedDate}</p>}
-
         {language && <p>Language: {language}</p>}
-
         {pageCount && <p>Pages: {pageCount}</p>}
-
         {categories && <p>Category: {categories.join(", ")}</p>}
-
         <p className={classes.bookModal__description}>
           {description || "No description available."}
         </p>
