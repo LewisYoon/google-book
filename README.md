@@ -1,6 +1,6 @@
 # LewBooGle
 
-LewBooGle is a React-based book search app using Google Books API. This app features a responsive glassmorphism interface, interactive hover book cards, and detailed book information through a modal view.
+LewBooGle is a React-based book search app using Google Books API. This app features a responsive glassmorphism interface, interactive hover book cards, and detailed book information through a modal view - Part of _nology bootcamp project.
 
 ## Features
 
@@ -68,6 +68,13 @@ VITE_BOOKS_API_KEY=YOUR_API_KEY
 ```bash
 npm run dev
 ```
+
+### Live Demo
+
+OR check out the deployed version:
+
+https://lewisyoon.github.io/google-book/
+
 
 ## Testing
 
