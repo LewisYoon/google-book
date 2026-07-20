@@ -32,6 +32,7 @@
     @include glass(30px);
 
     padding: 0.35rem;
+    animation: slideUp 0.5s ease;
   }
 
   &__input {
@@ -44,6 +45,7 @@
     outline: none;
     font-family: inherit;
 
+    animation: slideUp 0.5s ease;
     &::placeholder {
       color: var(--text);
       opacity: 0.5;
@@ -68,6 +70,7 @@
     &:active {
       transform: scale(0.95);
     }
+    animation: slideUp 0.5s ease;
   }
 
   @media (max-width: 600px) {
@@ -79,5 +82,16 @@
     &__button {
       width: 100%;
     }
+  }
+}
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

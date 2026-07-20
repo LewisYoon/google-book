@@ -10,6 +10,8 @@
     max-width: 450px;
     margin: 4rem auto;
     padding: 2.5rem 2rem;
+    transition: 0.2 ease;
+    animation: slideUp 0.5s ease;
   }
 
   &__title {
@@ -29,5 +31,16 @@
   &__loading {
     display: flex;
     justify-content: center;
+  }
+}
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
