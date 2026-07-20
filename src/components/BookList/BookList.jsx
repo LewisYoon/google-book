@@ -9,7 +9,7 @@ const BookList = ({ books }) => {
   return (
     <>
       <div className={classes.bookList}>
-        // Map through books array and render BookCard for each book
+        {/*Map through books array and render BookCard for each book-*/}
         {books.map((book) => (
           <BookCard
             key={book.id}
