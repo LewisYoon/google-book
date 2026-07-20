@@ -22,7 +22,7 @@ describe("BooksContainer", () => {
     render(<BooksContainer searchTerm="Sherlock Holmes" />);
     // Check loading state
 
-    expect(screen.getByText("loading...")).toBeInTheDocument();
+    expect(screen.getByText("Loading...")).toBeInTheDocument();
 
     // Check fetched books are rendered
     expect(await screen.findByText("Sherlock Holmes")).toBeInTheDocument();

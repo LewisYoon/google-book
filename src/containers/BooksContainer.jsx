@@ -51,7 +51,9 @@ const BooksContainer = ({ searchTerm }) => {
   if (status === "loading") {
     return (
       <div className={classes.booksContainer__loading}>
-        <p>loading...</p>
+        {/* adds spinner */}
+        <div className={classes.booksContainer__spinner}></div>
+        <p className={classes.booksContainer__loadingText}>Loading...</p>
       </div>
     );
   }
