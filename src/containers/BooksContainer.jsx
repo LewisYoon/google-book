@@ -51,9 +51,15 @@ const BooksContainer = ({ searchTerm }) => {
   if (status === "loading") {
     return (
       <div className={classes.booksContainer__loading}>
+<<<<<<< HEAD
         {/* adds spinner */}
         <div className={classes.booksContainer__spinner}></div>
         <p className={classes.booksContainer__loadingText}>Loading...</p>
+=======
+        {/*adds spinner*/}
+        <div className={classes.booksContainer__spinner}></div>
+        <p>Loading...</p>
+>>>>>>> e6bad84 (adds spin animation for loading && fixed default white search bar appearing)
       </div>
     );
   }

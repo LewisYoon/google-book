@@ -42,6 +42,7 @@
   }
 
   &__loading {
+<<<<<<< HEAD
     @include flex(column, 1rem);
     align-items: center;
     justify-content: center;
@@ -64,6 +65,25 @@
     margin: 0;
     font-size: 1.1rem;
     color: var(--text);
+=======
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  &__spinner {
+    width: 48px;
+
+    height: 48px;
+
+    border: 4px solid rgba(255, 255, 255, 0.15);
+
+    border-top: 4px solid var(--accent);
+
+    border-radius: 50%;
+
+    animation: spin 1s linear infinite;
+>>>>>>> e6bad84 (adds spin animation for loading && fixed default white search bar appearing)
   }
 }
 
@@ -80,10 +100,13 @@
 }
 
 @keyframes spin {
+<<<<<<< HEAD
   from {
     transform: rotate(0deg);
   }
 
+=======
+>>>>>>> e6bad84 (adds spin animation for loading && fixed default white search bar appearing)
   to {
     transform: rotate(360deg);
   }
