@@ -1,4 +1,3 @@
-
 # LewBooGle
 
 LewBooGle is a React-based book search app using Google Books API. This app features a responsive glassmorphism interface, interactive hover book cards, and detailed book information through a modal view.
@@ -21,7 +20,7 @@ LewBooGle is a React-based book search app using Google Books API. This app feat
 <img width="1440" height="779" alt="Screenshot 2026-07-20 at 4 33 54 pm" src="https://github.com/user-attachments/assets/7b7799a5-0497-47df-9e38-7d9a4d67c026" />
 
 ### Book Grid Card view (Search Results)
-<img width="1440" height="778" alt="Screenshot 2026-07-20 at 4 35 20 pm" src="https://github.com/user-attachments/assets/197a3395-505b-40b7-8c08-b221e7579c4b" />
+<img width="1440" height="779" alt="Screenshot 2026-07-20 at 4 37 00 pm" src="https://github.com/user-attachments/assets/967ec44e-3bda-4d40-9137-351434ef3a6d" />
 
 ### Book Card Details (When hovered)
 <img width="1440" height="778" alt="Screenshot 2026-07-20 at 4 35 41 pm" src="https://github.com/user-attachments/assets/6fe3f44f-73fa-454a-9cf1-3dec4fc59cc8" />
