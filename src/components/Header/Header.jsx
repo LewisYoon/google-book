@@ -1,9 +1,13 @@
 import classes from "./Header.module.scss";
 
 const Header = () => {
+  //redirect to base url when logo clicked
+  const redirect = () => {
+    window.location.href = "/";
+  };
   return (
     <header className={classes.header}>
-      <h1>
+      <h1 onClick={redirect}>
         <span className={classes.header__blue}>Lew_B</span>
         <span className={classes.header__red}>o</span>
         <span className={classes.header__yellow}>o</span>

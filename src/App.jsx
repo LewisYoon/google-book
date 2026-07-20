@@ -3,7 +3,6 @@ import "./App.scss";
 import Header from "./components/Header/Header";
 import SearchBar from "./components/SearchBar/SearchBar";
 import BooksContainer from "./containers/BooksContainer";
-
 function App() {
   const [searchTerm, setSearchTerm] = useState(null);
   const onSearch = (value) => setSearchTerm(value);
@@ -16,7 +15,7 @@ function App() {
         id="search-bar"
         onSearch={onSearch}
       />
-      <BooksContainer searchTerm={searchTerm} />
+      <BooksContainer key={searchTerm} searchTerm={searchTerm} />
     </>
   );
 }
