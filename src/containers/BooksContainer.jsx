@@ -43,7 +43,7 @@ const BooksContainer = ({ searchTerm }) => {
   if (status === "loading") {
     return (
       <div className={classes.booksContainer__loading}>
-        <p>loading books...</p>
+        <p>loading...</p>
       </div>
     );
   }
