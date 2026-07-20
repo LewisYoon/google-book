@@ -1,4 +1,5 @@
 import classes from "./BookCard.module.scss";
+import fallbackImg from "../../assets/fallback.png";
 
 const BookCard = ({ book, onClick }) => {
   //get required book info form google book api & return empty object is data is missing
@@ -7,7 +8,7 @@ const BookCard = ({ book, onClick }) => {
   //seperates authors by , if there are mutiple authors
   const authorsText = authors?.join(", ") || "Unknown Author";
   // Remove Google Books zoom parameter to request higher resolution image
-  const imageUrl = imageLinks?.thumbnail?.replace("zoom=1", "");
+  const imageUrl = imageLinks?.thumbnail?.replace("zoom=1", "") || fallbackImg;
   return (
     <article className={classes.bookCard} onClick={onClick}>
       <img src={imageUrl} alt={title} className={classes.bookCard__image} />

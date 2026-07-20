@@ -1,0 +1,1 @@
+regex:<img[^>]*55c616a8[^>]*>==REMOVED
