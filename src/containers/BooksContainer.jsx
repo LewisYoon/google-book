@@ -60,6 +60,20 @@ const BooksContainer = ({ searchTerm }) => {
     );
   }
 
+  // bonus MVP: returns no result message if book length === 0
+  if (status === "success" && books.length === 0) {
+    return (
+      <div className={classes.booksContainer__message}>
+        <h3 className={classes.booksContainer__title}>No Books Found</h3>
+
+        <p className={classes.booksContainer__text}>
+          No books found for "{searchTerm}". Try searching with a different
+          title, author, or keyword.
+        </p>
+      </div>
+    );
+  }
+
   if (status === "success") {
     return <BookList books={books} />;
   }
