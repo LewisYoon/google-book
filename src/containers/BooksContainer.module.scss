@@ -42,30 +42,6 @@
   }
 
   &__loading {
-<<<<<<< HEAD
-    @include flex(column, 1rem);
-    align-items: center;
-    justify-content: center;
-    margin: 4rem auto;
-    color: var(--text);
-    font-size: 1.2rem;
-    animation: slideUp 0.5s ease;
-  }
-
-  &__spinner {
-    width: 45px;
-    height: 45px;
-    border: 5px solid var(--border);
-    border-top: 5px solid var(--accent);
-    border-radius: 50%;
-    animation: spin 1s linear infinite;
-  }
-
-  &__loadingText {
-    margin: 0;
-    font-size: 1.1rem;
-    color: var(--text);
-=======
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -83,7 +59,6 @@
     border-radius: 50%;
 
     animation: spin 1s linear infinite;
->>>>>>> e6bad84 (adds spin animation for loading && fixed default white search bar appearing)
   }
 }
 
@@ -100,13 +75,6 @@
 }
 
 @keyframes spin {
-<<<<<<< HEAD
-  from {
-    transform: rotate(0deg);
-  }
-
-=======
->>>>>>> e6bad84 (adds spin animation for loading && fixed default white search bar appearing)
   to {
     transform: rotate(360deg);
   }

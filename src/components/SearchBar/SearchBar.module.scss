@@ -65,32 +65,16 @@
     font-size: 1rem;
     outline: none;
 
-<<<<<<< HEAD
-    @include lg {
-      padding: 1rem 1.5rem;
-      font-size: 1.25rem;
-    }
-
-=======
     animation: slideUp 0.5s ease;
->>>>>>> e6bad84 (adds spin animation for loading && fixed default white search bar appearing)
     &:-webkit-autofill,
     &:-webkit-autofill:hover,
     &:-webkit-autofill:focus,
     &:-webkit-autofill:active {
-<<<<<<< HEAD
-      -webkit-text-fill-color: var(--text-h) !important;
-      box-shadow: 0 0 0px 1000px transparent inset !important;
-      transition: background-color 5000s ease-in-out 0s;
-    }
-
-=======
       -webkit-background-clip: text;
       -webkit-text-fill-color: var(--text-h) !important;
       transition: background-color 5000s ease-in-out 0s;
       box-shadow: inset 0 0 20px 20px transparent !important;
     }
->>>>>>> e6bad84 (adds spin animation for loading && fixed default white search bar appearing)
     &::placeholder {
       color: var(--text);
       opacity: 0.5;
