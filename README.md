@@ -30,7 +30,8 @@ LewBooGle is a React-based book search app using Google Books API. This app feat
 
 ### Book Modal Details (When clicked)
 
-<img width="1440" height="778" alt="Screenshot 2026-07-20 at 4 36 05 pm" src="https://github.com/user-attachments/assets/55c616a8-65bd-464d-b1a9-bc53570be689" />
+<img width="1440" height="776" alt="Screenshot 2026-07-20 at 6 44 01 pm" src="https://github.com/user-attachments/assets/7c6137ea-441b-4c7f-a195-166d98588a60" />
+
 
 ## Built With
 
