@@ -1,0 +1,58 @@
+@use "../../scss/mixins/layout" as *;
+@use "../../scss/mixins/media" as *;
+
+.bookModal {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 100;
+
+  &__content {
+    @include glass(30px);
+    width: min(90%, 600px);
+    padding: 2rem;
+
+    color: var(--text);
+    position: relative;
+  }
+
+  &__close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+
+    background: transparent;
+    border: none;
+    color: white;
+
+    font-size: 2rem;
+    cursor: pointer;
+  }
+
+  &__title {
+    color: var(--text-h);
+    margin-top: 0;
+  }
+
+  &__description {
+    line-height: 1.6;
+  }
+  &__preview {
+    text-decoration: none;
+    @include glass(24px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 48px;
+    color: var(--text-h);
+
+    transition: 0.3s ease;
+    &:hover {
+      transform: translateY(-2px);
+    }
+  }
+}
