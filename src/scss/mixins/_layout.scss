@@ -22,3 +22,12 @@
     grid-template-columns: repeat(auto-fit, minmax($min-col-width, 1fr));
   }
 }
+
+@mixin glass($radius: 20px, $shadow: var(--glass-shadow)) {
+  background: var(--glass-bg);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border: 1px solid var(--glass-border);
+  border-radius: $radius;
+  box-shadow: $shadow;
+}
