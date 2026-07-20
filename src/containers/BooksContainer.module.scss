@@ -1,4 +1,5 @@
 @use "../scss/mixins/layout" as *;
+@use "../scss/mixins/media" as *;
 
 .booksContainer {
   &__message {
@@ -8,10 +9,18 @@
     justify-content: center;
     text-align: center;
     max-width: 450px;
-    margin: 4rem auto;
+    margin: 3.5rem auto;
     padding: 2.5rem 2rem;
-    transition: 0.2 ease;
+    transition: 0.2s ease;
     animation: slideUp 0.5s ease;
+
+    @include xl {
+      @include glass(32px);
+      max-width: 650px;
+      margin: 5rem auto;
+      padding: 4rem 3.5rem;
+      gap: 1.5rem;
+    }
   }
 
   &__title {
@@ -19,10 +28,14 @@
     font-weight: 700;
     color: var(--text-h);
     margin: 0;
+
+    @include xl {
+      font-size: 1.75rem;
+    }
   }
 
   &__text {
-    font-size: 0.95rem;
+    font-size: 1.3rem;
     color: var(--text);
     line-height: 1.5;
     margin: 0;
@@ -31,14 +44,15 @@
   &__loading {
     display: flex;
     justify-content: center;
+    font-size: 1.5rem;
   }
 }
+
 @keyframes slideUp {
   from {
     opacity: 0;
     transform: translateY(20px);
   }
-
   to {
     opacity: 1;
     transform: translateY(0);

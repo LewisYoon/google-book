@@ -9,8 +9,16 @@
   position: relative;
   z-index: 10;
 
+  @include lg {
+    max-width: 800px;
+  }
+
   &__form {
     @include flex(column, 0.5rem);
+
+    @include lg {
+      gap: 0.75rem;
+    }
   }
 
   &__label {
@@ -20,19 +28,32 @@
     letter-spacing: 0.05em;
     color: var(--accent);
     margin-left: 0.5rem;
+
+    @include lg {
+      font-size: 0.95rem;
+      margin-left: 1rem;
+    }
   }
 
   &__group {
     @include flex(row, 1rem);
     align-items: center;
+
+    @include md {
+      gap: 1.5rem;
+    }
   }
 
   &__inputWrapper {
     flex: 1;
     @include glass(30px);
-
     padding: 0.35rem;
     animation: slideUp 0.5s ease;
+
+    @include lg {
+      @include glass(40px);
+      padding: 0.5rem;
+    }
   }
 
   &__input {
@@ -43,9 +64,21 @@
     color: var(--text-h);
     font-size: 1rem;
     outline: none;
-    font-family: inherit;
 
-    animation: slideUp 0.5s ease;
+    @include lg {
+      padding: 1rem 1.5rem;
+      font-size: 1.25rem;
+    }
+
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus,
+    &:-webkit-autofill:active {
+      -webkit-text-fill-color: var(--text-h) !important;
+      box-shadow: 0 0 0px 1000px transparent inset !important;
+      transition: background-color 5000s ease-in-out 0s;
+    }
+
     &::placeholder {
       color: var(--text);
       opacity: 0.5;
@@ -62,15 +95,22 @@
     color: var(--accent);
     cursor: pointer;
     font-size: 1.2rem;
-
     transition: 0.3s ease;
+    animation: slideUp 0.5s ease;
+
+    @include lg {
+      @include glass(32px);
+      width: 64px;
+      height: 64px;
+      font-size: 1.6rem;
+    }
+
     &:hover {
       transform: translateY(-2px);
     }
     &:active {
       transform: scale(0.95);
     }
-    animation: slideUp 0.5s ease;
   }
 
   @media (max-width: 600px) {
@@ -84,12 +124,12 @@
     }
   }
 }
+
 @keyframes slideUp {
   from {
     opacity: 0;
     transform: translateY(20px);
   }
-
   to {
     opacity: 1;
     transform: translateY(0);
